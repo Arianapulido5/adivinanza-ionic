@@ -1,0 +1,7 @@
+{
+  "name": "adivinanza-ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
