@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar mode="ios">
+  <ion-buttons slot="start">
+  <ion-back-button default-href="/menu" text="volver"></ion-back-button>
+  </ion-buttons>
+  </ion-toolbar>
+ </ion-header>
+ <ion-content class="ion-padding">
+  <div class="game-container">
+  <ion-card mode="ios">
+  <ion-card-header class="ion-text-center">
+  <ion-card-title>Adivina el numero</ion-card-title>
+  </ion-card-header>
+  <ion-card-content class="ion-text-center">
+  <!-- Sección de juego activo -->
+  <p>¡Adivina un número entre 1 y 100!</p>
+  <!-- Input de intento -->
+  <ion-item>
+  <ion-label position="floating">Tu intento</ion-label>
+  <ion-input type="number"></ion-input>
+  </ion-item>
+  
+  <br>
+  <!-- Botón para adivinar -->
+  <ion-button expand=" block ">Adivinar</ion-button>
+  <!-- Reiniciar juego si ha terminado -->
+  <ion-button color="medium" expand="block">Reiniciar Juego</ion-button>
+</ion-card-content>
+</ion-card>
+<!-- Mensaje de respuesta -->
+<ion-card mode="ios">
+<ion-card-header class="ion-text-center">
+<ion-card-subtitle>Mensaje</ion-card-subtitle>
+</ion-card-header>
+</ion-card>
+</div>
+
+<!-- Input de intento -->
+<ion-item>
+  <ion-label position="floating">Tu intento</ion-label>
+  <ion-input [(ngModel)]="numero" type="number"></ion-input>
+ </ion-item>
+ <!-- Botón para adivinar -->
+ <ion-button (click)="onClickAdivinar()" expand="block">Adivinar</ion-button>
+ <!-- Reiniciar juego si ha terminado -->
+ <ion-button (click)="onClickReiniciar()" color="medium" expand="block">Reiniciar Juego</ion-button>
+</ion-content>
