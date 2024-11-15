@@ -1,54 +1,57 @@
 <ion-content class="ion-padding">
   <div class="login-container">
-  <ion-card mode="ios">
-  <ion-card-header class="ion-text-center">
-  <ion-card-title>Bienvenido</ion-card-title>
-  <ion-card-subtitle>Adivina el numero</ion-card-subtitle>
-  </ion-card-header>
-  <ion-card-content>
-  <form>
+    <ion-card mode="ios" class="contenedor">
+      <ion-card-header class="ion-text-center">
+        <ion-card-title>Bienvenido</ion-card-title>
+        <ion-card-subtitle>Adivina el número</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <form #frmLogin="ngForm">
+          <!-- Campo de Usuario -->
+          <div class="input-contenedor">
+            <ion-item lines="none" class="input-item">
+              <ion-label position="floating">Usuario</ion-label>
+              <ion-input [(ngModel)]="usuario" type="text" name="username" required></ion-input>
+              <ion-icon name="person-outline" slot="end"></ion-icon>
+            </ion-item>
+          </div>
+          <!-- Campo de Contraseña -->
+          <div class="input-contenedor">
+            <ion-item lines="none" class="input-item">
+              <ion-label position="floating">Contraseña</ion-label>
+              <ion-input [(ngModel)]="password" type="password" name="password" required></ion-input>
+              <ion-icon name="lock-closed-outline" slot="end"></ion-icon>
+            </ion-item>
+          </div>
+          <br />
+          <!-- Botón de Ingresar -->
+          <ion-button (click)="onClickIngresar(frmLogin)" expand="block" color="primary">Ingresar</ion-button>
+        </form>
+        <!-- Enlace para registrarse -->
+        <div class="register-link">
+          <ion-label>
+            ¿No tienes cuenta?
+            <a routerLink="/register">Regístrate aquí</a>
+          </ion-label>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+
+ 
+ <form #frmLogin="ngForm">
   <!-- Campo de Usuario -->
   <ion-item>
   <ion-label position="floating">Usuario</ion-label>
-  <ion-input type="text" name="username" required></ion-input>
+  <ion-input [(ngModel)]="usuario" type="text" name="username" required></ion-input>
   </ion-item>
   <!-- Campo de Contraseña -->
   <ion-item>
   <ion-label position="floating">Contraseña</ion-label>
-  <ion-input type="password" name="password" required></ion-input>
+  <ion-input [(ngModel)]="password" type="password" name="password" required></ion-input>
   </ion-item>
   <br/>
   <!-- Botón de Ingresar -->
-  <ion-button expand="block" color="primary">
-  Ingresar
-  </ion-button>
+  <ion-button (click)="onClickIngresar(frmLogin)" expand="block" color="primary">Ingresar</ion-button>
   </form>
-  <!-- Enlace para registrarse -->
- <div class="register-link">
-  <ion-label>
-  ¿No tienes cuenta?
-  <a routerLink="/register">Regístrate aquí</a>
-  </ion-label>
-  </div>
-  </ion-card-content>
-  </ion-card>
-  </div>
-
-
-  <form #frmLogin="ngForm">
-    <!-- Campo de Usuario -->
-    <ion-item>
-    <ion-label position="floating">Usuario</ion-label>
-    <ion-input [(ngModel)]="usuario" type="text" name="username" required></ion-input>
-    </ion-item>
-    <!-- Campo de Contraseña -->
-    <ion-item>
-    <ion-label position="floating">Contraseña</ion-label>
-    <ion-input [(ngModel)]="password" type="password" name="password" required></ion-input>
-    </ion-item>
-    <br/>
-    <!-- Botón de Ingresar -->
-    <ion-button (click)="onClickIngresar(frmLogin)" expand="block" color="primary">Ingresar</ion-button>
-    </form>
- </ion-content>
- 

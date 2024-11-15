@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#1b1a1a80, #1b1a1a80), url('/assets/img/game.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  ion-content {
+    --background: linear-gradient(#00000080, #33333393), url('/assets/img/game.png') no-repeat center center / cover;
+    min-height: 100vh;
+  }
+  
+  .game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  ion-card {
+    --background: rgba(16, 16, 16, 0.837);  
+    --border-radius: 15px;
+    --box-shadow: 0px 4px 6px rgb(255, 255, 255);
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  ion-card-header {
+    background: rgb(0, 0, 0); 
+    padding: 15px;
+    border-radius: 15px 15px 0 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+  
+  ion-card-title {
+    font-size: 24px;
+    color: white;
+  }
+  
+  ion-card-content {
+    padding: 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(58, 56, 56, 0.7);
+  }
+  
+  ion-item { 
+    --background: rgb(57, 57, 57); 
+    --border-radius: 10px; 
+    --padding-start: 10px;
+    --padding-end: 10px; 
+    
+}
+
+  ion-item ion-label, 
+  ion-item ion-input { 
+    --background: rgb(57, 57, 57); 
+    --color: white; 
+}
+  
+  ion-label {
+    color: white;
+  }
+  
+  ion-input {
+    --background: rgba(255, 255, 255, 0.2);
+    --color: white;
+    border-radius: 10px;
+  }
+  
+  ion-button {
+    --background: rgba(29, 99, 220, 0.864);
+    --background-hover: rgba(144, 138, 138, 0.8);
+    --border-radius: 20px;
+    --border-color: white;
+    --border-style: solid;
+    --border-width: 2px;
+    --color: white;
+    --padding-top: 12px;
+    --padding-bottom: 11px;
+    --padding-start: 20px;
+    --padding-end: 20px;
+    width: 80%;
+    max-width: 300px;
+    font-size: 18px;
+    margin-top: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+  }
+  
+  ion-button[color="medium"] {
+    --background: rgba(255, 255, 255, 0.3);
+    --background-hover: rgba(255, 255, 255, 0.5);
+  }
+  
+  ion-card-subtitle {
+    font-size: 18px;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  :host {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  
+    ion-content {
+      flex: 1;
+    }
+  }
+  
