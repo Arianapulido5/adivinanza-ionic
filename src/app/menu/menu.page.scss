@@ -1,14 +1,14 @@
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(#1b1a1a80, #1b1a1a80), url('/assets/img/menu.png') no-repeat;
+    background: linear-gradient(#1b1a1a80, #1b1a1a80), url('/assets/img/menu.jpg') no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
   }
   
   ion-content {
-    --background: linear-gradient(#00000080, #00000080), url('/assets/img/menu.png') no-repeat center center / cover;
+    --background: linear-gradient(#00000080, #00000080), url('/assets/img/menu.jpg') no-repeat center center / cover;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -23,7 +23,7 @@ body {
     background-color: rgba(0, 0, 0, 0.7);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
     max-width: 500px; 
-    margin: 0 auto; 
+    margin: 65px auto 0 auto;
   }
   
   .menu-container ion-text {
